@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        //Q1:
+//        //Q1:
         int num1, num2;
         System.out.println("Enter the first number ");
         num1=sc.nextInt();
@@ -82,8 +82,8 @@ public class Main {
        String word;
         System.out.println("input a word ");
         word=sc.nextLine();
-        for(int r=word.length()-1;r>-1;r--){
-            System.out.print(word.charAt(r));
+        for(int rr=word.length()-1;r>-1;r--){
+            System.out.print(word.charAt(rr));
 
         }
 
@@ -155,15 +155,15 @@ public class Main {
 
 
     //Q12
-      int seconds,hours,reminder,see;
+      int seconds,hours,reminder,see,min;
         System.out.println("Enter the the seconds: ");
         seconds=sc.nextInt();
         hours=seconds/3600;
         reminder=seconds%3600;
 
-        reminder=reminder/60;
+        min=reminder/60;
         see=reminder%60;
-        System.out.println(hours+","+reminder+","+see);
+        System.out.println(hours+","+min+","+see);
 
 
 
@@ -206,7 +206,7 @@ public class Main {
             System.out.println("the number is zero ");
         }
 
-        */
+
 
         //Q15
         int iteration,count,positive=0,negative=0,zeros=0,add;
@@ -217,10 +217,10 @@ public class Main {
         for(int c=0;c<iteration;c++){
                count=sc.nextInt();
                if(count>0){
-                   positive=positive+iteration;
+                   positive++;
 
                }else if(count<0){
-                   negative=negative+iteration;
+                   negative++;
                }
 
            }
@@ -241,21 +241,32 @@ public class Main {
 
 
 
-     //Q17
-     int nummbers;
+     //Q17 needs to be solved 
+     int nummbers,largest=0,smallest=0;
         System.out.println("Enter the numbers ");
-        boolean stop=true;
+        nummbers=sc.nextInt();
 
+        if(nummbers!=-1){
+            smallest=nummbers;
+            largest=nummbers;
 
+        }
         do {
             nummbers=sc.nextInt();
-            if(){
-                System.out.println("the largest");
+            if(nummbers==-1){
+                break;
+            }
+            if(largest<nummbers){
+                largest=nummbers;
+            }else if(smallest>nummbers){
+                smallest=nummbers;
             }
 
 
 
-        }while(nummbers==-100);
+        }while(nummbers!=-1);
+        System.out.println("The largest number is: "+largest);
+        System.out.println("The Smallest Number is: "+smallest);
 
 
 
